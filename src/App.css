@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Global styles */
+* {
+  margin: 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.master-container {
+  height: auto;
+  width: 100%;
+}
+.hide {
+  height: 7rem;
+}
+
+/* Navigation bar styles */
+.navbar {
+  list-style-type: none;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 1);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffe8e8;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+/* Container styles */
+.container-1 {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem;
+  gap: 3rem;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC")
+    repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate-charcter {
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 5rem;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.title {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+}
+.container-3 {
+  display: flex;
+  flex-direction: column;
+}
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.about-content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.community-content {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 979px) {
+  .ag-community_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-community-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .ag-community_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .ag-community-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-community-item_link {
+    padding: 22px 40px;
+  }
+  .ag-community-item_date-box {
+    font-size: 16px;
+  }
+}
+/* Media queries for responsive design */
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 3rem;
+    justify-content: space-around;
+    display: flex;
+    gap: 10px;
+  }
+
+  .container-1 {
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+/*Scroll bar*/
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
+}
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
